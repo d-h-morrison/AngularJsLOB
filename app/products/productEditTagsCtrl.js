@@ -24,11 +24,11 @@
             else{
                 alert("Please enter one or more tags separated by commas.");
             }
-        }
+        };
 
         vm.removeTag = function(tagIndex){
             //debugger;
-            var tags = vm.product.tags;
+            //var tags = vm.product.tags;
             vm.product.tags.splice(tagIndex,1);
         }
     }
