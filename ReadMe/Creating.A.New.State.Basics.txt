@@ -1,0 +1,5 @@
+1. Create the view template (html file)
+2. Create the view's controller (js file)
+3. Configure the state in the app.js
+4. Activate the state--can use one of three methods to do so.
+	e.g. <a ui-sref="someStateThingy"></a> in an html file.
