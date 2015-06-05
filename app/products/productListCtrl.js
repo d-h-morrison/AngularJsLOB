@@ -1,7 +1,7 @@
 /**
  * Created by david on 5/29/2015.
  */
-// Use an Immediately Invokes Function Expression (IIFE).
+// Use an Immediately Invoked Function Expression (IIFE).
 (
   function(){
       "use strict";
