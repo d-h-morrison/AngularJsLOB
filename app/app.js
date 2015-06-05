@@ -8,6 +8,8 @@
     var app = angular.module("AngularJsLOB" /*Main module*/,
                             ["common.services",
                              "ui.router", // Most full-featured Angular router based on named, nested and parallel views.
+                             "ui.mask",  // Angular utility class for masking data entry fields.
+                             "ui.bootstrap", // Bootstrap UI utilities.
                              "productResourceMock"]/*dependencies*/);
 
     app.config(["$stateProvider",
@@ -54,11 +56,6 @@
                             }
                         })
 
-                        .state("productEdit.info",{
-                            url:"/info",
-                            templateUrl: "app/products/productEditInfoView.html"
-                        })
-
                         .state("productEdit.price",{
                             url:"/price",
                             templateUrl: "app/products/productEditPriceView.html"
@@ -67,6 +64,19 @@
                         .state("productEdit.tags",{
                             url:"/tags",
                             templateUrl: "app/products/productEditTagsView.html"
+                        })
+
+                        .state("productEdit.info",{
+                            url:"/info",
+                            templateUrl: "app/products/productEditInfoView.html",
+                            controller: "ProductEditInfoCtrl as vm",
+                            resolve: {
+                                productResource: "productResource",
+                                product: function(productResource, $stateParams){
+                                    var productId = $stateParams.productId;
+                                    return productResource.get({productId: productId}).$promise;
+                                }
+                            }
                         })
 
                         // Product detail state.

@@ -52,7 +52,7 @@
             {
                 "productId": 6,
                 "productName": "Russian T-14 Armata",
-                "productCode": "RT14-0945",
+                "productCode": "RMS-0945",
                 "releaseDate": "May 30, 2014",
                 "description": "Battle ready T-14.  Ammunition must be purchased separately.",
                 "cost": 45000000.00,
@@ -85,10 +85,10 @@
             return [200, product,{}];
         });
 
-
+// I.E. $save()...
         $httpBackend.whenPOST(productUrl).respond(function (method,url,data) {
             var product = angular.fromJson(data);
-
+            //debugger;
             if(!product.productId){
                 // New product.  Assign id.
                 product.productId = products[products.length-1].productId +1;
