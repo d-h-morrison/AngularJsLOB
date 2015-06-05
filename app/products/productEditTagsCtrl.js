@@ -31,5 +31,13 @@
             //var tags = vm.product.tags;
             vm.product.tags.splice(tagIndex,1);
         }
+
+        vm.submit = function(product){
+            vm.product.$save();
+        }
+
+        vm.cancel = function(){
+            $state.go('productList');
+        }
     }
 }());
