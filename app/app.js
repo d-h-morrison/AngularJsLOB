@@ -63,7 +63,8 @@
 
                         .state("productEdit.tags",{
                             url:"/tags",
-                            templateUrl: "app/products/productEditTagsView.html"
+                            templateUrl: "app/products/productEditTagsView.html",
+                            controller: "productEditTagsCtrl as vm"
                         })
 
                         .state("productEdit.info",{
