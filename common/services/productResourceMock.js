@@ -14,7 +14,7 @@
         var products;
         products = [
             {
-                " productId": 1,
+                "productId": 1,
                 "productName": "Leaf Rake",
                 "productCode": "GDN-0011",
                 "releaseDate": "March 19, 2009",

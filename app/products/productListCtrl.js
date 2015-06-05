@@ -1,13 +1,13 @@
 /**
  * Created by david on 5/29/2015.
  */
-// Use an IIFE.
+// Use an Immediately Invokes Function Expression (IIFE).
 (
   function(){
       "use strict";
 
       angular
-          .module("AngularJsLOB")
+          .module("AngularJsLOB")// Register with main module.
           .controller("ProductListCtrl",
                         ["productResource",
                             ProductListCtrl]);
